@@ -1,13 +1,15 @@
-import React from 'react'
+import ProductCard from "@/components/Products/ProductCard";
+import ProductDetails from "@/components/Products/ProductDetails";
+import React from "react";
 
 const ProductDetailsBySlug = () => {
   return (
     <div>
-        
-
-        <h2>Apple 14 pro Max</h2>
+      <ProductDetails />
+      {/* Recomended Product */}
+      <ProductCard/>
     </div>
-  )
-}
+  );
+};
 
-export default ProductDetailsBySlug
+export default ProductDetailsBySlug;
