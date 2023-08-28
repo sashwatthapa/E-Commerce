@@ -1,18 +1,17 @@
 import Link from "next/link";
 import React, { FC } from "react";
-import ProductCardClass from "./ProductCardClass";
 import Image from "next/image";
+import ProductCardClass from "../Products/ProductCardClass";
 
-interface ProductCardProps {
-  productName: string;
+interface CategoryCardProps {
+  categoryName: string;
   slug: string;
   imageSrc: string;
   imageAlt: string;
-  price: string;
 }
 
-const ProductCard: FC<ProductCardProps> = (props) => {
-  const { productName, slug, imageSrc, imageAlt, price } = props;
+const CategoryCard: FC<CategoryCardProps> = (props) => {
+  const { categoryName, slug, imageSrc, imageAlt } = props;
   return (
     <div>
       <Link href={slug} className="group">
@@ -25,11 +24,10 @@ const ProductCard: FC<ProductCardProps> = (props) => {
             className={ProductCardClass.productImg}
           />
         </div>
-        <h3 className="mt-4 text-sm text-gray-700">{productName}</h3>
-        <p className="mt-1 text-lg font-medium text-gray-900">{price}</p>
+        <h6 className="mt-4 text-xs text-gray-600">{categoryName}</h6>
       </Link>
     </div>
   );
 };
 
-export default ProductCard;
+export default CategoryCard;
