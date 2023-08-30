@@ -19,10 +19,13 @@ export default {
       validation: (Rule: any) => Rule.required(),
     },
     {
-        name:'image',
-        type: 'url',
-        // validation: (Rule: any) => Rule.required(),
-    }
-
+      name: 'image',
+      type: 'url',
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'description',
+      type: 'string',
+    },
   ],
 }
